@@ -19,7 +19,27 @@ const Note = ({ note, onDelete, onEdit }) => {
     }
   };
 
-  return <div></div>;
+  return (
+    <div>
+      {isEditing ? (
+        <div>
+          <input
+            type="text"
+            value={editedNote}
+            onChange={handleInputChange}
+            onKeyDown={handleInputKeyDown}
+          />
+          <button onClick={handleSave}> Save</button>
+        </div>
+      ) : (
+        <div>
+          <p>{note.title}</p>
+          <button onClick={() => setEditedNote(true)}>Edit</button>
+          <button onClick={() => onDelete(note.id)}>Delete</button>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Note;
