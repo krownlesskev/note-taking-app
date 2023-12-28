@@ -103,9 +103,4 @@ function App() {
 }
 
 export default App;
-// className={`bg-${
-//   darkMode ? "gray-700" : "blue-500"
-// } text-white py-2 px-4 rounded`}
-// className={`bg-${
-//   darkMode ? "gray-700" : "blue-500"
-// } text-white py-2 px-4 rounded`}
+

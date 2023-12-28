@@ -24,6 +24,7 @@ const Note = ({ note, onDelete, onEdit }) => {
       {isEditing ? (
         <div>
           <input
+            className="border rounded"
             type="text"
             value={editedNote}
             onChange={handleInputChange}
@@ -34,8 +35,18 @@ const Note = ({ note, onDelete, onEdit }) => {
       ) : (
         <div>
           <p>{note.title}</p>
-          <button onClick={() => setIsEditing(true)}>Edit</button>
-          <button onClick={() => onDelete(note.id)}>Delete</button>
+          <button
+            className="mx-1 px-2 py-1 bg-blue-400 rounded"
+            onClick={() => setIsEditing(true)}
+          >
+            Edit
+          </button>
+          <button
+            className="mx-1 px-2 py-1 bg-red-500 rounded"
+            onClick={() => onDelete(note.id)}
+          >
+            Delete
+          </button>
         </div>
       )}
     </div>
