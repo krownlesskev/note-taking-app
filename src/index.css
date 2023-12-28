@@ -1,14 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 /* Custom styles for dark mode */
 .dark {
     background-color: #1a202c;
     color: #cbd5e0;
   }
   
-  /* Additional styles for dark mode inputs */
+  Additional styles for dark mode inputs
   .dark input {
     color: #cbd5e0;
   }

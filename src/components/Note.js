@@ -34,7 +34,7 @@ const Note = ({ note, onDelete, onEdit }) => {
       ) : (
         <div>
           <p>{note.title}</p>
-          <button onClick={() => setEditedNote(true)}>Edit</button>
+          <button onClick={() => setIsEditing(true)}>Edit</button>
           <button onClick={() => onDelete(note.id)}>Delete</button>
         </div>
       )}
